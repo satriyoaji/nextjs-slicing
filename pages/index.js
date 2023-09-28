@@ -1,131 +1,67 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import ResponsiveAppBar from "../components/molecules/appbar";
+import {Grid, Typography, Box } from "@mui/material";
+
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className={styles.description}>
-          Get started by editing <code>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/canary/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
+    <>
+    <ResponsiveAppBar/>
+    <Grid sx={{ bgcolor: 'black', mt:1, height: '100%', maxHeight: '200vh', py:4 }} container spacing={2}>
+      <Grid item xs={8}>
+        <Box sx={{ m: 0, p:4 }} >
+          <div>
+            <Typography sx={{color: '#ffffff'}} variant="h1" component="h2">
+              We Create a Magnificent
+              Digital Project to Grow
+            </Typography>
+            <Typography sx={{color: '#0c1f6b'}} variant="h1" component="h2">
+              Your Bussines
+            </Typography>
+          </div>
+          <div>
+            <Typography sx={{color: '#ffffff', mt: 2}} variant="h5" component="h5">
+              Create your product and let us be the part of your busssines journey
+              to build your own product , we’re really experience with our field
+            </Typography>
+          </div>
+        </Box>
+      </Grid>
+      <Grid item xs={4}>
+        <div>
+          IMAGES CONTENT
         </div>
-      </main>
-
-      <footer>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </Grid>
+      <Grid item xs={12} sx={{color: '#ffffff', mt: 2}}>
+        <Grid
+            container
+            direction="row"
+            justifyContent="center"
+            alignItems="center"
+            spacing={2}
         >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel" className={styles.logo} />
-        </a>
-      </footer>
-
-      <style jsx>{`
-        main {
-          padding: 5rem 0;
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-        footer img {
-          margin-left: 0.5rem;
-        }
-        footer a {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          text-decoration: none;
-          color: inherit;
-        }
-        code {
-          background: #fafafa;
-          border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
-          font-family:
-            Menlo,
-            Monaco,
-            Lucida Console,
-            Liberation Mono,
-            DejaVu Sans Mono,
-            Bitstream Vera Sans Mono,
-            Courier New,
-            monospace;
-        }
-      `}</style>
-
-      <style jsx global>{`
-        html,
-        body {
-          padding: 0;
-          margin: 0;
-          font-family:
-            -apple-system,
-            BlinkMacSystemFont,
-            Segoe UI,
-            Roboto,
-            Oxygen,
-            Ubuntu,
-            Cantarell,
-            Fira Sans,
-            Droid Sans,
-            Helvetica Neue,
-            sans-serif;
-        }
-        * {
-          box-sizing: border-box;
-        }
-      `}</style>
-    </div>
+          <Grid item xs={4}>
+            <div>Card</div>
+          </Grid>
+          <Grid item xs={4}>
+            <div>Card</div>
+          </Grid>
+          <Grid item xs={4}>
+            <div>Card</div>
+          </Grid>
+          <Grid item xs={4}>
+            <div>Card</div>
+          </Grid>
+          <Grid item xs={4}>
+            <div>Card</div>
+          </Grid>
+          <Grid item xs={4}>
+            <div>Card</div>
+          </Grid>
+        </Grid>
+      </Grid>
+    </Grid>
+    </>
   );
 }
